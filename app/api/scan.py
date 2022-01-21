@@ -1,14 +1,16 @@
 from fastapi import APIRouter, Body, Response
 from app.schemas import Fuzz_input
-from starlette.response import JSONResponse
-import logging
+from starlette.responses import JSONResponse
+import logging, os
 
 router = APIRouter()
 
 @router.post("/scan", status_code=200)
-def scan(req_body: Fuzz_input = Body(...)) -> Response:
+def test(req_body: Fuzz_input = Body(...)) -> Response:
     try:
         if req_body:
+            url = req_body.url
+            os.system(f"docker run -v $(pwd)/reports:/var/reports ffuf {url}")
             return JSONResponse(
                 status_code = 200,
                 content = {
