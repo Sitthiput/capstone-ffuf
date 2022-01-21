@@ -1,12 +1,14 @@
 version: "3.0"
 
 services:
-  scan_service:
-    image: boom/scan-service
-    build: .
+  ffuf-service:
+    image: boom/ffuf-service
+    build:
+      context: .
+      dockerfile: ./app/ffuf/Dockerfile
     restart: unless-stopped
     ports:
-      - 8000:8000
+      - 2000:2000
     volumns:
       - ./reports/:/reports
     
