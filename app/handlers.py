@@ -6,5 +6,5 @@ app = FastAPI()
 app.include_router(
     scan.router,
     prefix="/api",
-    response={404: {"message": "Not Found"}},
+    responses={404: {"message": "Not Found"}},
 )
