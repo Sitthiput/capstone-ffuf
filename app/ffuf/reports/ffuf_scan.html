@@ -1,0 +1,617 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1.0"
+    />
+    <title>FFUF Report - </title>
+
+    
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
+	/>
+	<link 
+	  rel="stylesheet" 
+	  type="text/css" 
+	  href="https://cdn.datatables.net/1.10.20/css/jquery.dataTables.css"
+	/>
+  
+  </head>
+
+  <body>
+    <nav>
+      <div class="nav-wrapper">
+        <a href="#" class="brand-logo">FFUF</a>
+        <ul id="nav-mobile" class="right hide-on-med-and-down">
+        </ul>
+      </div>
+    </nav>
+
+    <main class="section no-pad-bot" id="index-banner">
+      <div class="container">
+        <br /><br />
+        <h1 class="header center ">FFUF Report</h1>
+        <div class="row center">
+
+		<pre>ffuf -w words_and_files_top5000.txt -u https://google.com/FUZZ -H X-Scanner: FFUF -of all -o /var/reports/ffuf_scan -ac -mc 200 -r</pre>
+		<pre>2022-01-22T15:55:23Z</pre>
+
+   <table id="ffufreport">
+        <thead>
+        <div style="display:none">
+|result_raw|StatusCode|Input|Position|ContentLength|ContentWords|ContentLines|
+        </div>
+          <tr>
+              <th>Status</th>
+              <th>FUZZ</th>
+
+			  <th>URL</th>
+			  <th>Redirect location</th>
+              <th>Position</th>
+              <th>Length</th>
+              <th>Words</th>
+              <th>Lines</th>
+			  <th>Resultfile</th>
+          </tr>
+        </thead>
+
+        <tbody>
+			
+                <div style="display:none">
+|result_raw|200|.well-known/security.txt|https://google.com/.well-known/security.txt||710|246|7|7|
+                </div>
+                <tr class="result-200" style="background-color: #adea9e;">
+                    <td><font color="black" class="status-code">200</font></td>
+                    
+                        <td>.well-known/security.txt</td>
+                    
+                    <td><a href="https://google.com/.well-known/security.txt">https://google.com/.well-known/security.txt</a></td>
+                    <td><a href=""></a></td>
+                    <td>710</td>
+                    <td>246</td>
+                    <td>7</td>
+                    <td>7</td>
+                    <td></td>
+                </tr>
+            
+                <div style="display:none">
+|result_raw|200|accounts|https://google.com/accounts||858|97898|7919|1868|
+                </div>
+                <tr class="result-200" style="background-color: #adea9e;">
+                    <td><font color="black" class="status-code">200</font></td>
+                    
+                        <td>accounts</td>
+                    
+                    <td><a href="https://google.com/accounts">https://google.com/accounts</a></td>
+                    <td><a href=""></a></td>
+                    <td>858</td>
+                    <td>97898</td>
+                    <td>7919</td>
+                    <td>1868</td>
+                    <td></td>
+                </tr>
+            
+                <div style="display:none">
+|result_raw|200|answers|https://google.com/answers||1237|2912|211|86|
+                </div>
+                <tr class="result-200" style="background-color: #adea9e;">
+                    <td><font color="black" class="status-code">200</font></td>
+                    
+                        <td>answers</td>
+                    
+                    <td><a href="https://google.com/answers">https://google.com/answers</a></td>
+                    <td><a href=""></a></td>
+                    <td>1237</td>
+                    <td>2912</td>
+                    <td>211</td>
+                    <td>86</td>
+                    <td></td>
+                </tr>
+            
+                <div style="display:none">
+|result_raw|200|activity|https://google.com/activity||865|189481|3568|533|
+                </div>
+                <tr class="result-200" style="background-color: #adea9e;">
+                    <td><font color="black" class="status-code">200</font></td>
+                    
+                        <td>activity</td>
+                    
+                    <td><a href="https://google.com/activity">https://google.com/activity</a></td>
+                    <td><a href=""></a></td>
+                    <td>865</td>
+                    <td>189481</td>
+                    <td>3568</td>
+                    <td>533</td>
+                    <td></td>
+                </tr>
+            
+                <div style="display:none">
+|result_raw|200|blog/wp-login.php|https://google.com/blog/wp-login.php||1564|230870|61899|4981|
+                </div>
+                <tr class="result-200" style="background-color: #adea9e;">
+                    <td><font color="black" class="status-code">200</font></td>
+                    
+                        <td>blog/wp-login.php</td>
+                    
+                    <td><a href="https://google.com/blog/wp-login.php">https://google.com/blog/wp-login.php</a></td>
+                    <td><a href=""></a></td>
+                    <td>1564</td>
+                    <td>230870</td>
+                    <td>61899</td>
+                    <td>4981</td>
+                    <td></td>
+                </tr>
+            
+                <div style="display:none">
+|result_raw|200|blog/wp-content/backups|https://google.com/blog/wp-content/backups||1562|230870|61899|4981|
+                </div>
+                <tr class="result-200" style="background-color: #adea9e;">
+                    <td><font color="black" class="status-code">200</font></td>
+                    
+                        <td>blog/wp-content/backups</td>
+                    
+                    <td><a href="https://google.com/blog/wp-content/backups">https://google.com/blog/wp-content/backups</a></td>
+                    <td><a href=""></a></td>
+                    <td>1562</td>
+                    <td>230870</td>
+                    <td>61899</td>
+                    <td>4981</td>
+                    <td></td>
+                </tr>
+            
+                <div style="display:none">
+|result_raw|200|blog|https://google.com/blog||1559|230870|61899|4981|
+                </div>
+                <tr class="result-200" style="background-color: #adea9e;">
+                    <td><font color="black" class="status-code">200</font></td>
+                    
+                        <td>blog</td>
+                    
+                    <td><a href="https://google.com/blog">https://google.com/blog</a></td>
+                    <td><a href=""></a></td>
+                    <td>1559</td>
+                    <td>230870</td>
+                    <td>61899</td>
+                    <td>4981</td>
+                    <td></td>
+                </tr>
+            
+                <div style="display:none">
+|result_raw|200|blog/error_log|https://google.com/blog/error_log||1560|230870|61899|4981|
+                </div>
+                <tr class="result-200" style="background-color: #adea9e;">
+                    <td><font color="black" class="status-code">200</font></td>
+                    
+                        <td>blog/error_log</td>
+                    
+                    <td><a href="https://google.com/blog/error_log">https://google.com/blog/error_log</a></td>
+                    <td><a href=""></a></td>
+                    <td>1560</td>
+                    <td>230870</td>
+                    <td>61899</td>
+                    <td>4981</td>
+                    <td></td>
+                </tr>
+            
+                <div style="display:none">
+|result_raw|200|blog/wp-login|https://google.com/blog/wp-login||1563|230870|61899|4981|
+                </div>
+                <tr class="result-200" style="background-color: #adea9e;">
+                    <td><font color="black" class="status-code">200</font></td>
+                    
+                        <td>blog/wp-login</td>
+                    
+                    <td><a href="https://google.com/blog/wp-login">https://google.com/blog/wp-login</a></td>
+                    <td><a href=""></a></td>
+                    <td>1563</td>
+                    <td>230870</td>
+                    <td>61899</td>
+                    <td>4981</td>
+                    <td></td>
+                </tr>
+            
+                <div style="display:none">
+|result_raw|200|blog/wp-content/backup-db|https://google.com/blog/wp-content/backup-db||1561|230870|61899|4981|
+                </div>
+                <tr class="result-200" style="background-color: #adea9e;">
+                    <td><font color="black" class="status-code">200</font></td>
+                    
+                        <td>blog/wp-content/backup-db</td>
+                    
+                    <td><a href="https://google.com/blog/wp-content/backup-db">https://google.com/blog/wp-content/backup-db</a></td>
+                    <td><a href=""></a></td>
+                    <td>1561</td>
+                    <td>230870</td>
+                    <td>61899</td>
+                    <td>4981</td>
+                    <td></td>
+                </tr>
+            
+                <div style="display:none">
+|result_raw|200|crossdomain.xml|https://google.com/crossdomain.xml||1975|235|9|6|
+                </div>
+                <tr class="result-200" style="background-color: #adea9e;">
+                    <td><font color="black" class="status-code">200</font></td>
+                    
+                        <td>crossdomain.xml</td>
+                    
+                    <td><a href="https://google.com/crossdomain.xml">https://google.com/crossdomain.xml</a></td>
+                    <td><a href=""></a></td>
+                    <td>1975</td>
+                    <td>235</td>
+                    <td>9</td>
+                    <td>6</td>
+                    <td></td>
+                </tr>
+            
+                <div style="display:none">
+|result_raw|200|custom|https://google.com/custom||1982|17385|357|19|
+                </div>
+                <tr class="result-200" style="background-color: #adea9e;">
+                    <td><font color="black" class="status-code">200</font></td>
+                    
+                        <td>custom</td>
+                    
+                    <td><a href="https://google.com/custom">https://google.com/custom</a></td>
+                    <td><a href=""></a></td>
+                    <td>1982</td>
+                    <td>17385</td>
+                    <td>357</td>
+                    <td>19</td>
+                    <td></td>
+                </tr>
+            
+                <div style="display:none">
+|result_raw|200|docs|https://google.com/docs||2219|97943|7924|1869|
+                </div>
+                <tr class="result-200" style="background-color: #adea9e;">
+                    <td><font color="black" class="status-code">200</font></td>
+                    
+                        <td>docs</td>
+                    
+                    <td><a href="https://google.com/docs">https://google.com/docs</a></td>
+                    <td><a href=""></a></td>
+                    <td>2219</td>
+                    <td>97943</td>
+                    <td>7924</td>
+                    <td>1869</td>
+                    <td></td>
+                </tr>
+            
+                <div style="display:none">
+|result_raw|200|images|https://google.com/images||2644|16670|336|18|
+                </div>
+                <tr class="result-200" style="background-color: #adea9e;">
+                    <td><font color="black" class="status-code">200</font></td>
+                    
+                        <td>images</td>
+                    
+                    <td><a href="https://google.com/images">https://google.com/images</a></td>
+                    <td><a href=""></a></td>
+                    <td>2644</td>
+                    <td>16670</td>
+                    <td>336</td>
+                    <td>18</td>
+                    <td></td>
+                </tr>
+            
+                <div style="display:none">
+|result_raw|200|index.html|https://google.com/index.html||2695|17328|357|19|
+                </div>
+                <tr class="result-200" style="background-color: #adea9e;">
+                    <td><font color="black" class="status-code">200</font></td>
+                    
+                        <td>index.html</td>
+                    
+                    <td><a href="https://google.com/index.html">https://google.com/index.html</a></td>
+                    <td><a href=""></a></td>
+                    <td>2695</td>
+                    <td>17328</td>
+                    <td>357</td>
+                    <td>19</td>
+                    <td></td>
+                </tr>
+            
+                <div style="display:none">
+|result_raw|200|health|https://google.com/health||2571|89580|14916|1576|
+                </div>
+                <tr class="result-200" style="background-color: #adea9e;">
+                    <td><font color="black" class="status-code">200</font></td>
+                    
+                        <td>health</td>
+                    
+                    <td><a href="https://google.com/health">https://google.com/health</a></td>
+                    <td><a href=""></a></td>
+                    <td>2571</td>
+                    <td>89580</td>
+                    <td>14916</td>
+                    <td>1576</td>
+                    <td></td>
+                </tr>
+            
+                <div style="display:none">
+|result_raw|200|local|https://google.com/local||2929|40883|621|72|
+                </div>
+                <tr class="result-200" style="background-color: #adea9e;">
+                    <td><font color="black" class="status-code">200</font></td>
+                    
+                        <td>local</td>
+                    
+                    <td><a href="https://google.com/local">https://google.com/local</a></td>
+                    <td><a href=""></a></td>
+                    <td>2929</td>
+                    <td>40883</td>
+                    <td>621</td>
+                    <td>72</td>
+                    <td></td>
+                </tr>
+            
+                <div style="display:none">
+|result_raw|200|mail|https://google.com/mail||3063|102591|8324|1987|
+                </div>
+                <tr class="result-200" style="background-color: #adea9e;">
+                    <td><font color="black" class="status-code">200</font></td>
+                    
+                        <td>mail</td>
+                    
+                    <td><a href="https://google.com/mail">https://google.com/mail</a></td>
+                    <td><a href=""></a></td>
+                    <td>3063</td>
+                    <td>102591</td>
+                    <td>8324</td>
+                    <td>1987</td>
+                    <td></td>
+                </tr>
+            
+                <div style="display:none">
+|result_raw|200|moderator|https://google.com/moderator||3190|744638|21535|3708|
+                </div>
+                <tr class="result-200" style="background-color: #adea9e;">
+                    <td><font color="black" class="status-code">200</font></td>
+                    
+                        <td>moderator</td>
+                    
+                    <td><a href="https://google.com/moderator">https://google.com/moderator</a></td>
+                    <td><a href=""></a></td>
+                    <td>3190</td>
+                    <td>744638</td>
+                    <td>21535</td>
+                    <td>3708</td>
+                    <td></td>
+                </tr>
+            
+                <div style="display:none">
+|result_raw|200|mobile|https://google.com/mobile||3180|236566|35834|5054|
+                </div>
+                <tr class="result-200" style="background-color: #adea9e;">
+                    <td><font color="black" class="status-code">200</font></td>
+                    
+                        <td>mobile</td>
+                    
+                    <td><a href="https://google.com/mobile">https://google.com/mobile</a></td>
+                    <td><a href=""></a></td>
+                    <td>3180</td>
+                    <td>236566</td>
+                    <td>35834</td>
+                    <td>5054</td>
+                    <td></td>
+                </tr>
+            
+                <div style="display:none">
+|result_raw|200|password|https://google.com/password||3396|787166|21125|3764|
+                </div>
+                <tr class="result-200" style="background-color: #adea9e;">
+                    <td><font color="black" class="status-code">200</font></td>
+                    
+                        <td>password</td>
+                    
+                    <td><a href="https://google.com/password">https://google.com/password</a></td>
+                    <td><a href=""></a></td>
+                    <td>3396</td>
+                    <td>787166</td>
+                    <td>21125</td>
+                    <td>3764</td>
+                    <td></td>
+                </tr>
+            
+                <div style="display:none">
+|result_raw|200|services/|https://google.com/services/||4010|593|80|18|
+                </div>
+                <tr class="result-200" style="background-color: #adea9e;">
+                    <td><font color="black" class="status-code">200</font></td>
+                    
+                        <td>services/</td>
+                    
+                    <td><a href="https://google.com/services/">https://google.com/services/</a></td>
+                    <td><a href=""></a></td>
+                    <td>4010</td>
+                    <td>593</td>
+                    <td>80</td>
+                    <td>18</td>
+                    <td></td>
+                </tr>
+            
+                <div style="display:none">
+|result_raw|200|services|https://google.com/services||4007|593|80|18|
+                </div>
+                <tr class="result-200" style="background-color: #adea9e;">
+                    <td><font color="black" class="status-code">200</font></td>
+                    
+                        <td>services</td>
+                    
+                    <td><a href="https://google.com/services">https://google.com/services</a></td>
+                    <td><a href=""></a></td>
+                    <td>4007</td>
+                    <td>593</td>
+                    <td>80</td>
+                    <td>18</td>
+                    <td></td>
+                </tr>
+            
+                <div style="display:none">
+|result_raw|200|sms|https://google.com/sms||4088|3455|934|107|
+                </div>
+                <tr class="result-200" style="background-color: #adea9e;">
+                    <td><font color="black" class="status-code">200</font></td>
+                    
+                        <td>sms</td>
+                    
+                    <td><a href="https://google.com/sms">https://google.com/sms</a></td>
+                    <td><a href=""></a></td>
+                    <td>4088</td>
+                    <td>3455</td>
+                    <td>934</td>
+                    <td>107</td>
+                    <td></td>
+                </tr>
+            
+                <div style="display:none">
+|result_raw|200|security|https://google.com/security||3966|40270|7426|784|
+                </div>
+                <tr class="result-200" style="background-color: #adea9e;">
+                    <td><font color="black" class="status-code">200</font></td>
+                    
+                        <td>security</td>
+                    
+                    <td><a href="https://google.com/security">https://google.com/security</a></td>
+                    <td><a href=""></a></td>
+                    <td>3966</td>
+                    <td>40270</td>
+                    <td>7426</td>
+                    <td>784</td>
+                    <td></td>
+                </tr>
+            
+                <div style="display:none">
+|result_raw|200|profiles|https://google.com/profiles||3755|98090|7924|1869|
+                </div>
+                <tr class="result-200" style="background-color: #adea9e;">
+                    <td><font color="black" class="status-code">200</font></td>
+                    
+                        <td>profiles</td>
+                    
+                    <td><a href="https://google.com/profiles">https://google.com/profiles</a></td>
+                    <td><a href=""></a></td>
+                    <td>3755</td>
+                    <td>98090</td>
+                    <td>7924</td>
+                    <td>1869</td>
+                    <td></td>
+                </tr>
+            
+                <div style="display:none">
+|result_raw|200|script|https://google.com/script||3938|7500|1860|171|
+                </div>
+                <tr class="result-200" style="background-color: #adea9e;">
+                    <td><font color="black" class="status-code">200</font></td>
+                    
+                        <td>script</td>
+                    
+                    <td><a href="https://google.com/script">https://google.com/script</a></td>
+                    <td><a href=""></a></td>
+                    <td>3938</td>
+                    <td>7500</td>
+                    <td>1860</td>
+                    <td>171</td>
+                    <td></td>
+                </tr>
+            
+                <div style="display:none">
+|result_raw|200|tools|https://google.com/tools||4453|299332|28982|2296|
+                </div>
+                <tr class="result-200" style="background-color: #adea9e;">
+                    <td><font color="black" class="status-code">200</font></td>
+                    
+                        <td>tools</td>
+                    
+                    <td><a href="https://google.com/tools">https://google.com/tools</a></td>
+                    <td><a href=""></a></td>
+                    <td>4453</td>
+                    <td>299332</td>
+                    <td>28982</td>
+                    <td>2296</td>
+                    <td></td>
+                </tr>
+            
+                <div style="display:none">
+|result_raw|200|workspace/uploads|https://google.com/workspace/uploads||4795|131324|45469|2070|
+                </div>
+                <tr class="result-200" style="background-color: #adea9e;">
+                    <td><font color="black" class="status-code">200</font></td>
+                    
+                        <td>workspace/uploads</td>
+                    
+                    <td><a href="https://google.com/workspace/uploads">https://google.com/workspace/uploads</a></td>
+                    <td><a href=""></a></td>
+                    <td>4795</td>
+                    <td>131324</td>
+                    <td>45469</td>
+                    <td>2070</td>
+                    <td></td>
+                </tr>
+            
+                <div style="display:none">
+|result_raw|200|webmaster|https://google.com/webmaster||4748|100069|29324|3991|
+                </div>
+                <tr class="result-200" style="background-color: #adea9e;">
+                    <td><font color="black" class="status-code">200</font></td>
+                    
+                        <td>webmaster</td>
+                    
+                    <td><a href="https://google.com/webmaster">https://google.com/webmaster</a></td>
+                    <td><a href=""></a></td>
+                    <td>4748</td>
+                    <td>100069</td>
+                    <td>29324</td>
+                    <td>3991</td>
+                    <td></td>
+                </tr>
+            
+        </tbody>
+      </table>
+
+        </div>
+        <br /><br />
+      </div>
+    </main>
+
+    
+	<script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.js"></script>
+    <script>
+    $(document).ready(function() {
+        $('#ffufreport').DataTable(
+            {
+                "aLengthMenu": [
+                    [250, 500, 1000, 2500, -1],
+                    [250, 500, 1000, 2500, "All"]
+                ]
+            }
+        )
+        $('select').formSelect();
+        });
+    </script>
+    <style>
+      body {
+        display: flex;
+        min-height: 100vh;
+        flex-direction: column;
+      }
+
+      main {
+        flex: 1 0 auto;
+      }
+    </style>
+  </body>
+</html>
+
+	
