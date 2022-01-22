@@ -15,4 +15,4 @@ RUN apk --no-cache add git \
 WORKDIR /opt/ffuf/
 VOLUME /var/reports/
 
-ENTRYPOINT ["./start.sh"]
+ENTRYPOINT ["bash", "./start.sh"]
