@@ -5,4 +5,4 @@ __pycache__/
 env/
 .env
 .DS_Store
-app/ffuf/reports/*
+app/reports/
