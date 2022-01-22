@@ -1,14 +1,18 @@
 version: "3.0"
 
 services:
-  ffuf-service:
-    image: boom/ffuf-service
+  # api:
+
+  api:
+    # image: boom/ffuf-service
     build:
       context: .
-      dockerfile: ./app/ffuf/Dockerfile
-    restart: unless-stopped
+      # dockerfile: ./
+      # dockerfile: ./app/ffuf/Dockerfile
+    # restart: unless-stopped
     ports:
-      - 2000:2000
-    volumns:
+      - 8000:8000
+    volumes:
       - ./reports/:/reports
+      - /var/run/docker.sock:/var/run/docker.sock
     
