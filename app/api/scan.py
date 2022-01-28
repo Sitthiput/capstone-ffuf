@@ -10,7 +10,7 @@ def test(req_body: Fuzz_input = Body(...)) -> Response:
     try:
         if req_body:
             url = req_body.url
-            os.system(f"docker run -v $(pwd)/app/reports:/var/reports ffuf {url}")
+            os.system(f"docker run -v $DIND_HOST_PATH_PROJECT/app/reports:/var/reports ffuf {url}")
             return JSONResponse(
                 status_code = 200,
                 content = {

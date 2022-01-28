@@ -1,5 +1,7 @@
 python3 -m venv env
 source env/bin/activate
-pip install -r requirement.txt
+pip install -r requirement.txt/
+_______________________________
 
-server python -> python.os.("docker $(pwd)") -> json
+- Run through Bash script using: 'bash start_service.sh'
+( DONE )
