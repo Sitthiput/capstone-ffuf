@@ -16,15 +16,16 @@ fi
 set -x
 
 # Scan
-ffuf -w words_and_files_top5000.txt \
+/code/app/ffuf/ffuf -w /code/app/ffuf/words_and_files_top5000.txt \
     -u $target \
     -H "X-Scanner: FFUF" \
     -of all \
-    -o /var/reports/ffuf_scan \
+    -o /code/app/reports/ffuf_scan \
     -ac \
     -mc 200 \
     -r \
     ${@:2}
 
+ls /code/app/reports
 # Parse the report
-python3 ffuf.py
+python3 /code/app/ffuf/ffuf.py

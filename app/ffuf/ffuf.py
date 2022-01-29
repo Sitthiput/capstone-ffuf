@@ -6,10 +6,12 @@ data = {
     "vulnerabilities": []
 }
 
-report_path = "/var/reports/ffuf.json"
+file_path = "/code/app/reports"
+
+report_path = file_path + "/ffuf.json"
 
 try:
-    with open('/var/reports/ffuf_scan.csv', 'r') as csvfile:
+    with open(file_path + '/ffuf_scan.csv', 'r') as csvfile:
         report_reader = csv.reader(csvfile)
         # Skip the header
         next(report_reader)
