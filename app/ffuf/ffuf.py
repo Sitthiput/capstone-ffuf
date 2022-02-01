@@ -8,7 +8,7 @@ data = {
 
 file_path = "/code/app/reports"
 
-report_path = file_path + "/ffuf.json"
+report_path = file_path + "/result.json"
 
 try:
     with open(file_path + '/ffuf_scan', 'r') as csvfile:
@@ -18,8 +18,8 @@ try:
         for row in report_reader:
             data['vulnerabilities'].append({
                 'title': 'Directory / File Detected',
-                'description': row[1], # Full URL with fuzzed path
-                'severity': "medium"
+                'url': row[1], # Full URL with fuzzed path
+                'content-type': row[8],
             })
 
     with open(report_path, 'w') as outfile:
