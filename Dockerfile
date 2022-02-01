@@ -1,38 +1,35 @@
-# FROM docker
+# use golang image for pull binary ffuf
+FROM golang:alpine AS builder
 
-# WORKDIR /code
+# workdir at /app
+WORKDIR /app
 
-# RUN apk add --no-cache python3 py3-pip
+# download ffuf -> binary goes to /go/bin/ffuf
+RUN go install github.com/ffuf/ffuf@latest
 
-# COPY . .
-    
-# RUN pip3 install -r requirement.txt
+# as runner
+FROM python:3.9-alpine AS production
 
-# EXPOSE 8000
+# copy ffuf from builder
+COPY --from=builder /go/bin/ffuf /code/app/ffuf/ffuf
 
-# CMD ["sh", "docker_start.sh"]
-
-
-FROM ubuntu:20.04
-
+# workdir at /code
 WORKDIR /code
 
-RUN apt-get update
+# copy requirement.txt
+COPY requirement.txt requirement.txt
 
-RUN apt-get -y install wget git python3 python3-pip
+# install dependencies
+RUN python -m pip install --no-cache-dir -r requirement.txt
 
-RUN wget https://go.dev/dl/go1.17.6.linux-amd64.tar.gz
-
-RUN rm -rf /usr/local/go && tar -C /usr/local -xzf go1.17.6.linux-amd64.tar.gz
-
+# copy app
 COPY . .
 
-RUN git clone https://github.com/ffuf/ffuf ; cd ffuf ; /usr/local/go/bin/go get ; /usr/local/go/bin/go build
+# mod file to be executable
+RUN chmod +x /code/app/ffuf/start.sh
 
-RUN mv ./ffuf/ffuf /code/app/ffuf/ffuf
-
-RUN pip3 install -r requirement.txt
-
+# expose port
 EXPOSE 8000
 
-CMD ["python3", "main.py"]
+# run program
+CMD ["python", "main.py"]
