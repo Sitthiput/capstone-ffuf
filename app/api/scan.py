@@ -7,7 +7,7 @@ router = APIRouter()
 REPORT_FOLDER = '/code/app/reports'
 
 def load_json():
-    f = open('/code/app/reports/result.json')
+    f = open(REPORT_FOLDER + '/result.json')
     data = json.load(f)
     return data
 
