@@ -92,6 +92,10 @@ app.asar
 2020.tar.gz
 2020.tgz
 2020.zip
+2021.tar
+2021.tar.gz
+2021.tgz
+2021.zip
 7788.php
 8899.php
 9678.php
@@ -583,6 +587,7 @@ app.asar
 .scrutinizer.yml
 .secret
 .secret_key
+.security
 .selected_editor
 .sencha
 .settings
