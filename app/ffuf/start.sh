@@ -19,7 +19,7 @@ set -x
 /code/app/ffuf/ffuf -w /code/app/ffuf/words_and_files_top5000.txt \
     -u $target \
     -H "X-Scanner: FFUF" \
-    -recursion -recursion-depth 2 \
+    -recursion -recursion-depth 5 \
     -mc all -ac \
     -fc 400,404,429 \
     -o /code/app/reports/ffuf_scan \
