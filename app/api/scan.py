@@ -26,18 +26,19 @@ def test(req_body: Fuzz_input = Body(...)) -> Response:
             url = req_body.url
             clear_reports()
 
-            # TO DO: Catch error from os.system() and return error status code
             os.system(f'/bin/sh -c "/code/app/ffuf/start.sh {url}"')
 
             data = load_json()
             result = {
                 'message': 'Directories / Files found by fuzzing',
+                'total': 0,
                 'data': []
             }
 
             for obj in data['vulnerabilities']:
                 tmp = {'url': obj['url'], 'content-type': obj['content-type']}
                 result['data'].append(tmp)
+                result['total'] += 1
 
             return JSONResponse(
                 status_code = 200,
