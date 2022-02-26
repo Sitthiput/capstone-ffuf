@@ -36,7 +36,7 @@ def test(req_body: Fuzz_input = Body(...)) -> Response:
             }
 
             for obj in data['vulnerabilities']:
-                tmp = {'url': obj['url'], 'content-type': obj['content-type']}
+                tmp = {'url': obj['url'], 'content_type': obj['content-type']}
                 result['data'].append(tmp)
                 result['total'] += 1
 
