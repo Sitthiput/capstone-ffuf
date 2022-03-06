@@ -20,7 +20,7 @@ def clear_reports():
             print(f'Failed to delete {file_path}. Reason: {e}')
 
 @router.post("/scan", status_code=200)
-def test(req_body: Fuzz_input = Body(...)) -> Response:
+def scan(req_body: Fuzz_input = Body(...)) -> Response:
     try:
         if req_body:
             url = req_body.url
