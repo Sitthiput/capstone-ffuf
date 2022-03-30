@@ -17,7 +17,7 @@ set -x
 
 # Scan
 /code/app/ffuf/ffuf -w /code/app/ffuf/words_and_files_top5000.txt \
-    -u $target \
+    -u $target -ignore-body \
     -H "X-Scanner: FFUF" \
     -recursion -recursion-depth 5 \
     -mc all -ac \
